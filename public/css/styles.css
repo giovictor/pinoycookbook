@@ -1,0 +1,153 @@
+body {
+    font-family:Century Gothic;
+}
+
+header nav {
+    background-color: #596449;
+    height:100px;
+}
+
+#logo {
+    height:80px;
+    width:130px;
+    margin-left:50px;
+}
+
+ul {
+    margin-right:100px;
+}
+
+ul li {
+    padding-left:50px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+#dishdropdown {
+    width:280px;
+}
+
+#dishdropdown a:hover {
+    background-color: #596449;
+    color:white;
+}
+
+.container {
+    margin-top:40px;
+}
+
+.welcome {
+    margin-bottom:70px;
+}
+
+.welcome h3, .welcome p {
+    border-bottom:solid black 1px;
+    padding-bottom:20px;
+}
+
+.welcome p {
+    text-align:justify;
+}
+
+.dishes {
+    text-align:center;
+}
+
+.card {
+    display:inline-block;
+    margin:25px;
+}
+
+#dish_img {
+    width:500px;
+    height:300px;
+}
+
+.preview-container {
+    text-align:center;
+}
+
+#preview_img {
+    margin-top:30px;
+    width:800px;
+    height:400px;
+}
+
+#dish_img_card {
+    width:200px;
+    height:120px;
+}
+
+#readmorebtn, #loginbutton,  #registerbutton, #signupbutton, #passwordresetbtn {
+    background-color:#596449;
+    border-color:#596449;
+}
+
+#deleteform {
+    margin-top:5px;
+}
+
+.dishrow {
+    margin-top:40px;
+    margin-bottom:40px;
+    text-align:justify;
+}
+
+#login, .register, .resetpassword {
+    margin-left:21%;
+}
+
+#loginform, #register, #resetpassword {
+    width:600px;
+}
+
+.resetpassword {
+    height:335px;
+}
+
+#resetpassword {
+    padding:20px;
+}
+
+#loginformcol {
+    border-right:solid #596449 1px;
+}
+
+#loginbtn {
+    margin-top:70px;
+    padding-left:60px;
+}
+
+#loginbutton, #registerbutton, #signupbutton, #passwordresetbtn {
+    padding-left:30px;
+    padding-right:30px;
+    color:white;
+    opacity:1;
+}
+
+#loginbutton:hover, #registerbutton:hover, #signupbutton:hover, #passwordresetbtn:hover {
+    opacity:0.8;
+}
+
+
+#registerbutton {
+    padding-right:20px;
+}
+
+#footer {
+    background-color:#596449;
+    height:150px;
+    color:white;
+    text-align:center;
+}
+
+#footer p {
+    padding-top:10px;
+    margin-bottom:10px;
+}
+
+#footer a {
+    color:white;
+}
