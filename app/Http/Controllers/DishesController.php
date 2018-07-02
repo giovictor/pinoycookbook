@@ -11,7 +11,8 @@ use Storage;
 
 class DishesController extends Controller
 {
-   public function __construct() {
+   public function __construct() 
+   {
        $this->middleware('auth')->only('create', 'edit','store','update','delete','showPendingDishes','approveDish');
    }
 

@@ -33,13 +33,7 @@
                                 </form>
                             @endif
                         @elseif(Auth::user()->user_type=='Admin')
-                            <form action="{{route('delete',['id'=>$dish->id])}}" method="POST" id="deleteform">
-                                {{csrf_field()}}
-                                {{method_field('DELETE')}}
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-danger btn-sm">DELETE DISH</button>
-                                </div>
-                            </form>       
+                          
                         @endif
                     @endif
                 </div>
