@@ -7,9 +7,6 @@
             <li class="nav-item">
                 <a href="{{route('homepage')}}" class="nav-link">HOME</a>
             </li>
-            {{-- <li class="nav-item">
-                <a href="#" class="nav-link">ABOUT</a>
-            </li> --}}
             <li class="nav-item dropdown">
                 <a href="#" id="dishesnavbarDropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     DISHES <span class="caret"></span>

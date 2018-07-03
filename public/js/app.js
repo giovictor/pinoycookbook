@@ -13875,14 +13875,14 @@ module.exports = __webpack_require__(48);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-window.Vue = __webpack_require__(36);
-window.Vue = __webpack_require__(16);
+// window.Vue = __webpack_require__(36);
+// window.Vue = __webpack_require__(16);
 
-Vue.component('deletedish', __webpack_require__(39));
+// Vue.component('deletedish', __webpack_require__(39));
 
-var app = new Vue({
-    el: '#app'
-});
+// var app = new Vue({
+//     el: '#app'
+// });
 
 /***/ }),
 /* 13 */
