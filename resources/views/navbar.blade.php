@@ -7,7 +7,7 @@
             <li class="nav-item">
                 <a href="{{route('homepage')}}" class="nav-link">HOME</a>
             </li>
-            {{-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navdropdown" aria-haspopup="true" aria-expanded="false" role="button">
                     DISHES <span class="caret"></span>
                 </a>
@@ -17,11 +17,11 @@
                         <a href="{{route('dish-type',['id'=>$dish_type->id])}}" class="nav-link" style="color:black;">{{$dish_type->dish_type}}</a>
                     @endforeach
                 </div>
-            </li> --}}
+            </li>
             <li class="nav-item">
                 <a href="{{route('contribute')}}" class="nav-link">CONTRIBUTE</a>
             </li>
-            {{-- @if(Auth::check())
+            @if(Auth::check())
                 @if(Auth::user()->user_type=='Admin') 
                     @if(count($pending_dishes))
                         <li class="nav-item">
@@ -41,7 +41,7 @@
                         @csrf
                     </form>
                 </li>
-            @endif --}}
+            @endif
         </ul>
     </nav>
 </header>

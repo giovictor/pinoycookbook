@@ -14,8 +14,7 @@ class DishesController extends Controller
 {
     public function __construct() 
     {
-        $this->middleware('auth');
-        // ->only('create', 'edit','store','update','delete','showPendingDishes','approveDish');
+        $this->middleware('auth')->only('create', 'edit','store','update','delete','showPendingDishes','approveDish');
     }
 
     public function index()
