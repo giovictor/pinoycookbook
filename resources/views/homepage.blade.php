@@ -25,15 +25,15 @@
                         @if(Auth::user()->user_type=='User')
                             @if(Auth::id()==$dish->contributed_user_id)
                                 <form action="{{route('delete',['id'=>$dish->id])}}" method="POST" id="deleteform">
-                                    {{csrf_field()}}
-                                    {{method_field('DELETE')}}
+                                    @csrf
+                                    @method('DELETE')
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-danger btn-sm">DELETE DISH</button>
                                     </div>
                                 </form>
                             @endif
                         @elseif(Auth::user()->user_type=='Admin')
-                          
+                    
                         @endif
                     @endif
                 </div>

@@ -13,15 +13,15 @@ header nav {
     margin-left:50px;
 }
 
-ul {
+#navlinks {
     margin-right:100px;
 }
 
-ul li {
+#navlinks li {
     padding-left:50px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+#navlinks li a {
     color: white;
 }
 

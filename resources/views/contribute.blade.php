@@ -3,13 +3,10 @@
 @section('content')
     <h4>CONTRIBUTE A DISH</h4>
     <form action="{{route('contribute')}}" method="POST" enctype="multipart/form-data">
-        {{csrf_field()}}
+        @csrf
         <div class="form-group">
             <label for="thumbnail">Upload Pic:</label>
-            <input type="file" class="form-control" name="thumbnail" id="thumbnail" value="{{old('thumbnail')}}" onchange="previewImage()">
-            <div class="preview-container">
-                <img src="{{asset('img/preview.jpg')}}" id="preview_img">
-            </div>
+            <input type="file" class="form-control" name="thumbnail" id="thumbnail" value="{{old('thumbnail')}}">
         </div>
 
         <div class="form-group">
@@ -19,7 +16,7 @@
 
         <div class="form-group">
             <label for="dish_type">Dish Type:</label>
-            <select class="form-control" name="dish_type" id="dish_type">
+            <select class="form-control" name="dish_type_id" id="dish_type">
                     <option value="">Choose A Dish Type...</option>
                     @foreach($dish_types as $dish_type)
                         <option value="{{$dish_type->id}}" {{old('dish_type') == $dish_type->id ? 'selected' : ''}}>{{$dish_type->dish_type}}</option>
@@ -47,7 +44,6 @@
             <label for="procedure">Procedure:</label>
             <textarea class="form-control" name="procedure" id="procedure" rows="10">{{old('procedure')}}</textarea>
         </div>
-
         <button type="submit" class="btn btn-primary">SUBMIT</button>
         @include('errors')
     </form>

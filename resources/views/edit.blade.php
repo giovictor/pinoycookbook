@@ -6,8 +6,8 @@
         <a href="{{route('dish',['id'=>$dish->id])}}" class="btn btn-primary" style="float:right;">VIEW DISH</a>
     @endif
     <form action="{{route('edit',['id'=>$dish->id])}}" method="POST" enctype="multipart/form-data">
-        {{csrf_field()}}
-        {{method_field('PUT')}}
+        @csrf
+        @method('PUT')
 
         <div class="form-group">
             <p>Display Thumbnail:</p>
@@ -28,7 +28,7 @@
 
         <div class="form-group">
             <label for="dish_type">Dish Type:</label>
-            <select class="form-control" name="dish_type" id="dish_type">
+            <select class="form-control" name="dish_type_id" id="dish_type">
                     <option value="">Choose A Dish Type...</option>
                     @foreach($dish_types as $dish_type)
                         <option value="{{$dish_type->id}}" {{$dish->dish_type_id == $dish_type->id ? 'selected' : ''}}>{{$dish_type->dish_type}}</option>

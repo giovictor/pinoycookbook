@@ -11,7 +11,7 @@
             <a href="{{route('edit',['id'=>$dish->id])}}" class="btn btn-primary" style="float:right;">EDIT DISH</a>
         @endif
     @endif
-    <p>Category: {{$dish->dish_types->dish_type}}</p>
+    <p>Category: {{$dish->dish_type->dish_type}}</p>
     <p>Contributed By: {{$dish->user->name}}</p>
     <div class="row dishrow">
         <div class="col-md-6">

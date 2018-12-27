@@ -14,22 +14,24 @@
 
 Route::get('/', 'DishesController@index')->name('homepage');
 
-Route::get('dish/{id}', 'DishesController@show')->name('dish');
+Route::get('dish/{dish}', 'DishesController@show')->name('dish');
 
 Route::get('contribute', 'DishesController@create')->name('contribute');
 
 Route::post('contribute', 'DishesController@store')->name('contribute');
 
-Route::get('edit/{id}', 'DishesController@edit')->name('edit');
+Route::get('edit/{dish}', 'DishesController@edit')->name('edit');
 
-Route::put('edit/{id}', 'DishesController@update')->name('edit');
+Route::put('edit/{dish}', 'DishesController@update')->name('edit');
 
-Route::delete('delete/{id}', 'DishesController@destroy')->name('delete');
+Route::delete('delete/{dish}', 'DishesController@destroy')->name('delete');
 
-Route::get('dish-type/{id}', 'DishTypesController@showDishByDishTypes')->name('dish-type');
+Route::get('dish-type/{dish}', 'DishTypesController@showDishByDishTypes')->name('dish-type');
 
 Route::get('pending-dishes', 'DishesController@showPendingDishes')->name('pending-dishes');
 
-Route::post('approve-dish/{id}', 'DishesController@approveDish')->name('approve-dish');
+Route::post('approve-dish/{dish}', 'DishesController@approveDish')->name('approve-dish');
 
 Auth::routes();
+
+// Route::resource('dishes','DishController');

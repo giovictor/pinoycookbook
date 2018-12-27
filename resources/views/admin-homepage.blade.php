@@ -3,7 +3,7 @@
 @section('content')
     <h4>PENDING DISHES</h4>
     <div class="dishes">
-        @foreach($dishes as $dish)
+        @foreach($pending_dishes as $dish)
             <div class="card" style="width: 19.5rem;">
                 <img id="dish_img_card" class="card-img-top" src="{{asset($dish->dish_img)}}">
                 <div class="card-body">
