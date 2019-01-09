@@ -22,5 +22,7 @@ Route::delete('delete/{dish}', 'DishesController@destroy')->name('delete');
 Route::get('dish-type/{dish}', 'DishTypesController@showDishByDishTypes')->name('dish-type');
 Route::get('pending-dishes', 'DishesController@showPendingDishes')->name('pending-dishes');
 Route::post('approve-dish/{dish}', 'DishesController@approveDish')->name('approve-dish');
+
+
 Auth::routes();
 
