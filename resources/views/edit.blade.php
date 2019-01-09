@@ -3,9 +3,9 @@
 @section('content')
     <h4>UPDATE DISH</h4>
     @if(Auth::check())
-        <a href="{{route('dish',['id'=>$dish->id])}}" class="btn btn-primary" style="float:right;">VIEW DISH</a>
+        <a href="{{secure_url(route('dish',['id'=>$dish->id]))}}" class="btn btn-primary" style="float:right;">VIEW DISH</a>
     @endif
-    <form action="{{route('edit',['id'=>$dish->id])}}" method="POST" enctype="multipart/form-data">
+    <form action="{{secure_url(route('edit',['id'=>$dish->id]))}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

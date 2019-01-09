@@ -5,10 +5,10 @@
     @if(Auth::check())
         @if(Auth::user()->user_type=='User')
             @if(Auth::id()==$dish->contributed_user_id)
-                <a href="{{route('edit',['id'=>$dish->id])}}" class="btn btn-primary" style="float:right;">EDIT DISH</a>
+                <a href="{{secure_url(route('edit',['id'=>$dish->id]))}}" class="btn btn-primary" style="float:right;">EDIT DISH</a>
             @endif
         @elseif(Auth::user()->user_type=='Admin')
-            <a href="{{route('edit',['id'=>$dish->id])}}" class="btn btn-primary" style="float:right;">EDIT DISH</a>
+            <a href="{{secure_url(route('edit',['id'=>$dish->id]))}}" class="btn btn-primary" style="float:right;">EDIT DISH</a>
         @endif
     @endif
     <p>Category: {{$dish->dish_type->dish_type}}</p>

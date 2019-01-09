@@ -9,10 +9,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$dish->dish}}</h5>
                     <p class="card-text">{!!substr($dish->description, 0, 53)."..."!!}</p>
-                    <a href="{{route('dish',['id' => $dish->id])}}" class="btn btn-primary btn-sm" id="readmorebtn">READ MORE</a>
+                    <a href="{{secure_url(route('dish',['id' => $dish->id]))}}" class="btn btn-primary btn-sm" id="readmorebtn">READ MORE</a>
                     @if(Auth::check())
                         @if(Auth::id()==$dish->contributed_user_id)
-                            <form action="{{route('delete',['id'=>$dish->id])}}" method="POST" id="deleteform">
+                            <form action="{{secure_url(route('delete',['id'=>$dish->id]))}}" method="POST" id="deleteform">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                 <div class="form-group">
