@@ -34,4 +34,3 @@ Route::post('approve-dish/{dish}', 'DishesController@approveDish')->name('approv
 
 Auth::routes();
 
-// Route::resource('dishes','DishController');

@@ -32,9 +32,8 @@ class DishesController extends Controller
     public function store(DishRequest $request)
     {   
         $dish = Dish::create($request->validated());      
-        $dish = Dish::findOrFail($dish->id);
-        $dish->contributed_user_id = Auth::id();
-        $dish->admin_approval = 'Yes';
+        $dish['contributed_user_id'] = Auth::id();
+        $dish['admin_approval'] = 'Yes';
         $dish->save();
         return redirect()->route('homepage');
     }
