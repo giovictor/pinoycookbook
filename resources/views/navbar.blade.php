@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" href="{{route('homepage')}}">
-            <img src="{{secure_asset('img/logo.png')}}" id="logo">
+            <img src="{{asset('img/logo.png')}}" id="logo">
         </a>
         <ul class="navbar-nav ml-auto" id="navlinks">
             <li class="nav-item">

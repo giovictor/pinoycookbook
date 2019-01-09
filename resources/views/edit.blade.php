@@ -12,7 +12,7 @@
         <div class="form-group">
             <p>Display Thumbnail:</p>
             <div class="preview-container">
-                <img id="preview_img" src="{{secure_asset($dish->dish_img)}}" style="margin-top:0px;">
+                <img id="preview_img" src="{{asset($dish->dish_img)}}" style="margin-top:0px;">
             </div>
         </div>
 
