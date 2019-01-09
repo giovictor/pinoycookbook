@@ -2,7 +2,7 @@
 
 @section('content')
     <h4>CONTRIBUTE A DISH</h4>
-    <form action="{{secure_url(route('contribute'))}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('contribute')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="thumbnail">Upload Pic:</label>

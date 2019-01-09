@@ -3,7 +3,7 @@
 @section('content')
     <div id="login">
         <div class="card" id="loginform">
-            <form method="POST" action="{{ secure_url(route('login')) }}">
+            <form method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="card-body">
@@ -54,7 +54,7 @@
                                 </button>
                             </div>
                             <div class="form-group">
-                                <a href="{{secure_url(route('register'))}}" class="btn btn-primary" id="registerbutton">SIGN UP</a>
+                                <a href="{{route('register')}}" class="btn btn-primary" id="registerbutton">SIGN UP</a>
                             </div>
                         </div>
                     </div>

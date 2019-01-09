@@ -4,7 +4,7 @@
     <div class="register">
         <div id="register">
           <h4 style="border-bottom:solid #596449 1px;padding-bottom:5px;">Create Your Account</h4>
-            <form method="POST" action="{{ secure_url(route('register')) }}">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
 
                 <div class="form-group">
