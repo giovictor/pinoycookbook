@@ -44,13 +44,13 @@ class DishesController extends Controller
         return view('dish', compact('dish'));
     }
 
-
+  
     public function edit(Dish $dish)
     {
         return view('edit',compact('dish','dish_types'));
     }
 
-
+ 
     public function update(DishRequest $request, Dish $dish)
     {   
         $dish->update($request->validated());
