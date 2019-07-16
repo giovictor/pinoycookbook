@@ -10,16 +10,21 @@ use App\DishType;
 use Auth;
 use Storage;
 
+use App\Repositories\DishRepositoryInterface;
+
 class DishesController extends Controller
 {
-    public function __construct() 
+    public $dish;
+
+    public function __construct(DishRepositoryInterface $dish) 
     {
+        $this->dish = $dish;
         $this->middleware('auth')->only('create', 'edit','store','update','delete','showPendingDishes','approveDish');
     }
 
     public function index()
     {
-        $dishes = Dish::where('admin_approval', 'Yes')->orderBy('created_at','desc')->get();
+        $dishes = $this->dish->all();
         return view('homepage',compact('dishes'));
     }
     
