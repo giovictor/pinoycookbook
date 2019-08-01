@@ -19,6 +19,7 @@ class DishesController extends Controller
     public function __construct(DishRepositoryInterface $dish) 
     {
         $this->dish = $dish;
+        
         $this->middleware('auth')->only('create', 'edit','store','update','delete','showPendingDishes','approveDish');
     }
 
@@ -49,13 +50,13 @@ class DishesController extends Controller
         return view('dish', compact('dish'));
     }
 
-  
+
     public function edit(Dish $dish)
     {
         return view('edit',compact('dish','dish_types'));
     }
 
- 
+
     public function update(DishRequest $request, Dish $dish)
     {   
         $dish->update($request->validated());
