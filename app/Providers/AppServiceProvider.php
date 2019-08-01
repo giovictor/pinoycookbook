@@ -18,9 +18,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        
-        View::share('dish_types', DishType::where('id','<','11')->get());
+
+
+        View::share('dish_types', Dish::where('admin_approval', 'No')->orderBy('created_at', 'desc')->get());
         View::share('pending_dishes', Dish::where('admin_approval', 'No')->orderBy('created_at', 'desc')->get());
+        
     }
 
     /**

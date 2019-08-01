@@ -5,7 +5,7 @@
     <div class="dishes">
         @foreach($dishes as $dish)
             <div class="card" style="width: 19.5rem;">
-                <img id="dish_img_card" class="card-img-top" src="{{asset($dish->dish_img)}}">
+                <img id="dish_img_card" class="card-img-top" src="{{asset($dish->thumbnail)}}">
                 <div class="card-body">
                     <h5 class="card-title">{{$dish->dish}}</h5>
                     <p class="card-text">{!!substr($dish->description, 0, 53)."..."!!}</p>

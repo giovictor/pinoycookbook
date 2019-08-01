@@ -40,7 +40,12 @@ class DishesController extends Controller
         $dish = Dish::create($request->validated());      
         $dish['contributed_user_id'] = Auth::id();
         $dish['admin_approval'] = 'Yes';
+
+        $dish['thumbnail'] = $request->file('thumbnail')->store('img');
+
+
         $dish->save();
+        
         return redirect()->route('homepage');
     }
 

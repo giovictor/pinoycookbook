@@ -15,7 +15,7 @@
     <p>Contributed By: {{$dish->user->name}}</p>
     <div class="row dishrow">
         <div class="col-md-6">
-            <img id="dish_img" src="{{asset($dish->dish_img)}}">
+            <img id="dish_img" src="{{asset($dish->thumbnail)}}">
         </div>
         <div class="col-md-6">
             <h5>{!!$dish->description!!}</h5>

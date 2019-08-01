@@ -24,7 +24,7 @@ class DishRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'thumbnail' => 'image|required',
+            'thumbnail' => 'image|required',
             'dish' => 'required',
             'dish_type_id' => 'required',
             'description' => 'required',
