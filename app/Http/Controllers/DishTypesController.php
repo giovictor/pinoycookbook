@@ -8,6 +8,10 @@ use App\Dish;
 
 class DishTypesController extends Controller
 {
+    public function index()
+    {
+        return DishType::all();
+    }
     public function showDishByDishTypes($id) {
         $dish_type = DishType::findOrFail($id);
         $dishes = Dish::where('dish_type_id', $dish_type->id)->where('admin_approval','Yes')->get();
