@@ -6,6 +6,18 @@ header nav {
     background-color: #596449;
     height:100px;
 }
+.navbar {
+    padding:0;
+}
+
+.navbar-toggler {
+    margin: 20px;
+}
+
+.navbar-collapse {
+    background-color: #596449;
+    z-index:2;
+}
 
 #logo {
     height:80px;
