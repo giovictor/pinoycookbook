@@ -27,6 +27,7 @@ class DishesController extends Controller
     {
         $dishes = $this->dish->all();
         return view('homepage',compact('dishes'));
+        
     }
     
     public function create()
@@ -53,6 +54,7 @@ class DishesController extends Controller
     public function show(Dish $dish)
     {   
         return view('dish', compact('dish'));
+        // return $dish;
     }
 
 

@@ -8,13 +8,14 @@
                 <a href="{{route('homepage')}}" class="nav-link">HOME</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navdropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                    DISHES <span class="caret"></span>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    DISHES
                 </a>
 
-                <div class="dropdown-menu" aria-labelledby="navdropdown">
+                <div class="dropdown-menu"
+                aria-labelledby="navbarDropdown">
                     @foreach($dish_types as $dish_type)
-                        <a href="{{route('dish-type',['id'=>$dish_type->id])}}" class="nav-link" style="color:black;">{{$dish_type->dish_type}}</a>
+                        <a href="{{route('dish-type',['id'=>$dish_type->id])}}" class="dropdown-item" style="color:black;">{{$dish_type->dish_type}}</a>
                     @endforeach
                 </div>
             </li>

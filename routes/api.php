@@ -17,6 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('dish_types','DishTypesController@index');
+Route::get('dish-type/{id}','DishTypesController@showDishByDishTypes');
+
+Route::get('dishes', 'DishesController@index');
+Route::get('dish/{dish}', 'DishesController@show');
 
 
 
