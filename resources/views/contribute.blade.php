@@ -44,7 +44,7 @@
             <label for="procedure">Procedure:</label>
             <textarea class="form-control" name="procedure" id="procedure" rows="10">{{old('procedure')}}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">SUBMIT</button>
+        <button type="submit" class="btn btn-primary formbtn">SUBMIT</button>
         @include('errors')
     </form>
 @endsection

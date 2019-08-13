@@ -129,6 +129,10 @@ header nav {
     text-align:justify;
 }
 
+.formbtn {
+    margin-bottom:20px;
+}
+
 #login, .register {
     display:flex;
     justify-content:center;
@@ -178,6 +182,10 @@ header nav {
     height:150px;
     color:white;
     text-align:center;
+}
+
+#footer .container {
+    margin-top:0;
 }
 
 #footer p {
