@@ -15,4 +15,9 @@ class Dish extends Model
     public function user() {
         return $this->belongsTo('App\User','contributed_user_id');
     }
+
+    public function getShortDescriptionAttribute()
+    {
+        return substr($this->description, 0, 40);
+    }
 }
