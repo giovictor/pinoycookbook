@@ -32,4 +32,11 @@ class DishRequest extends FormRequest
             'procedure' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'dish_type_id.required' => 'The dish type field is required.' 
+        ];
+    }
 }
