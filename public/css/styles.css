@@ -144,6 +144,10 @@ header nav {
     width:600px;
 }
 
+#login {
+    margin-bottom:70px;
+}
+
 .resetpassword {
     height:335px;
 }
