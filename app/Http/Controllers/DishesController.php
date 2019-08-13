@@ -41,12 +41,8 @@ class DishesController extends Controller
         $dish = Dish::create($request->validated());      
         $dish['contributed_user_id'] = Auth::id();
         $dish['admin_approval'] = 'Yes';
-
         $dish['thumbnail'] = $request->file('thumbnail')->store('img');
-
-
         $dish->save();
-        
         return redirect()->route('homepage');
     }
 
@@ -64,14 +60,18 @@ class DishesController extends Controller
 
 
     public function update(DishRequest $request, Dish $dish)
-    {   
+    {  
+        
         $dish->update($request->validated());
+        Storage::delete($dish->thumbnail);
+        $dish->thumbnail = $request->file('thumbnail')->store('img');
+        $dish->save();
         return redirect()->route('homepage');
     }
 
     public function destroy(Dish $dish)
     {
-        Storage::delete($dish->dish_img);
+        Storage::delete($dish->thumbnail);
         $dish->delete();
         return redirect()->route('homepage');
     }
@@ -84,7 +84,6 @@ class DishesController extends Controller
     public function approveDish(Dish $dish) {
         $dish->admin_approval = 'Yes';
         $dish->save();
-
         return redirect()->route('dish', ['id'=>$dish->id]);
     }
 }
