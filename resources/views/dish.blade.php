@@ -17,17 +17,17 @@
         <div class="col-md-6">
             <img id="dish_img" src="{{asset($dish->thumbnail)}}">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 descriptioncol">
             <h5>{!!$dish->description!!}</h5>
         </div>
     </div>
 
     <div class="row dishrow">
-        <div class="col-md-6">
+        <div class="col-md-6 ingredientscol">
             <h4>INGREDIENTS:</h4>
             <p>{!!$dish->ingredients!!}</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 procedurecol">
             <h4>PROCEDURE:</h4>
             <p>{!!$dish->procedure!!}</p>
         </div>

@@ -13,16 +13,16 @@
     @endif
 
     <h4>COMMON DISHES</h4>
-    <div class="dishes">
+    <div class="dishes row">
         @foreach($dishes as $dish)
-            <div class="card" style="width: 19.5rem;">
-                <img id="dish_img_card" class="card-img-top" src="{{asset($dish->thumbnail)}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{$dish->dish}}</h5>
-                    <p class="card-text">{!!substr($dish->description, 0, 53)."..."!!}</p>
-                    <a href="{{route('dish',['id' => $dish->id])}}" class="btn btn-primary btn-sm" id="readmorebtn">READ MORE</a>
-                    @if(Auth::check())
-                        @if(Auth::user()->user_type=='User')
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img id="dish_img_card" class="card-img-top" src="{{asset($dish->thumbnail)}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$dish->dish}}</h5>
+                        <p class="card-text">{!!$dish->shortDescription."..."!!}</p>
+                        <a href="{{route('dish',['id' => $dish->id])}}" class="btn btn-primary btn-sm" id="readmorebtn">READ MORE</a>
+                        @if(Auth::check())
                             @if(Auth::id()==$dish->contributed_user_id)
                                 <form action="{{route('delete',['id'=>$dish->id])}}" method="POST" id="deleteform">
                                     @csrf
@@ -32,12 +32,11 @@
                                     </div>
                                 </form>
                             @endif
-                        @elseif(Auth::user()->user_type=='Admin')
-                    
                         @endif
-                    @endif
+                    </div>
                 </div>
             </div>
         @endforeach
     </div>
+    {{$dishes->appends(request()->query())->links()}}
 @endsection

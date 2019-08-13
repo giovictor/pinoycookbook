@@ -1,0 +1,64 @@
+@media screen and (max-width:991px) {
+    #preview_img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    #navlinks li {
+        padding-left: 6px;
+    }
+
+    #footer {
+        height:100%;
+    }
+
+    .nodish img {
+        width:100%;
+    }
+
+    .descriptioncol, .ingredientscol, .procedurecol {
+        margin-top:15px;
+    }
+
+    .dishrow {
+        margin:0;
+    }
+
+    #loginform,#register, #resetpassword {
+        width:100%;
+    }
+
+    #loginformcol {
+        border:none;
+    }
+
+    #loginbtn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    #navlinks {
+        margin-right:0;
+    }
+
+    #navlinks li {
+        padding-left: 14px;
+    }
+}
+
+@media screen and (max-width:481px) {
+    #login .card {
+        margin:5px;
+    }
+
+    #dish_img {
+        height:100%;
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
