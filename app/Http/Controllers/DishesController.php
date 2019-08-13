@@ -54,13 +54,12 @@ class DishesController extends Controller
     public function show(Dish $dish)
     {   
         return view('dish', compact('dish'));
-        // return $dish;
     }
 
 
     public function edit(Dish $dish)
     {
-        return view('edit',compact('dish','dish_types'));
+        return view('edit',compact('dish'));
     }
 
 

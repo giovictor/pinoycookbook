@@ -14,7 +14,7 @@ class DishTypesController extends Controller
     }
     public function showDishByDishTypes($id) {
         $dish_type = DishType::findOrFail($id);
-        $dishes = Dish::where('dish_type_id', $id)->where('admin_approval','Yes')->with('dish_type')->get();
+        $dishes = Dish::where('dish_type_id', $id)->where('admin_approval','Yes')->with('dish_type')->paginate(12);
         return view('dish-type', compact('dishes','dish_type'));
     }
 }
